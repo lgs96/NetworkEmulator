@@ -25,4 +25,4 @@ The script also requires the following Linux tools and modules:
 To run the script, use the following command:
 
 ```bash
-python3 script.py --file <path_to_your_csv_file> --direction <uplink_or_downlink>
+sudo python3 script.py --file <path_to_your_csv_file> --direction <uplink_or_downlink>
