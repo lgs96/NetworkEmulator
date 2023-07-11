@@ -15,8 +15,8 @@ def reset_network(interface):
     # Remove the existing egress qdisc.
     cmd2 = f'sudo tc qdisc del root dev {interface}'
     
-    subprocess.run(cmd1, shell=True, check=True, stderr=subprocess.DEVNULL)
-    subprocess.run(cmd2, shell=True, check=True, stderr=subprocess.DEVNULL)
+    subprocess.run(cmd1, shell=True, stderr=subprocess.DEVNULL)
+    subprocess.run(cmd2, shell=True, stderr=subprocess.DEVNULL)
     
     print(f"Network interface {interface} has been reset to its default settings.")
 
