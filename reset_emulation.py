@@ -24,9 +24,14 @@ def main():
     # Get all network interfaces.
     interfaces = get_all_interfaces()
 
-    # Reset all network interfaces.
-    for interface in interfaces:
-        reset_network(interface)
+    # Ask user to input a network interface
+    user_interface = input("Please enter a network interface name: ")
+    
+    # Check if the user input interface is in the list of interfaces
+    if user_interface in interfaces:
+        reset_network(user_interface)
+    else:
+        print(f"Network interface {user_interface} does not exist. Please check the name.")
 
 if __name__ == "__main__":
     main()
