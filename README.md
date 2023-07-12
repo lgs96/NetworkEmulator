@@ -22,9 +22,13 @@ The script also requires the following Linux tools and modules:
 
 ## Usage
 
-To run the script, use the following command:
+To run the emulation, use the following command:
 
 ```bash
 sudo python3 emulation.py --interface <interface_name> --file <path_to_your_csv_file> --direction <uplink_or_downlink>
+```
 
+To reset the emulation setting:
+
+```bash
 sudo python3 reset_emulation.py 
