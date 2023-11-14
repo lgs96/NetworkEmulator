@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import subprocess
 import time
@@ -22,7 +23,17 @@ def change_network_conditions(file, direction, interface):
     for index, row in df.iterrows():
         # Extract the bandwidth and latency values.
         bandwidth = row['bandwidth']
-        latency = row['delay']
+        #latency = row['delay']
+
+        mean = 15
+        std = 0
+
+        # Generate random numbers with the specified mean and standard deviation
+        latency = np.random.normal(mean, std)
+        latency_max = 40
+        latency_min = 6
+        latency = min (latency, latency_max)
+        latency = max (latency, latency_min)
 
         # Print the current bandwidth and latency values.
         print(f"Changing {direction} bandwidth to: {bandwidth}Mbps and latency to: {latency}ms")
